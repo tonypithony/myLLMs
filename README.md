@@ -1,4 +1,7 @@
 # Ollama. Быстрый старт
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/ollama_llm.png)
+
 ```bash
 ollama ps
 ollama ls
@@ -31,9 +34,56 @@ ollama run anti
 
 # Llama 3.2 Vision
 
+```python
+import ollama
+
+res = ollama.chat(
+	model="llama3.2-vision", # "llava:7b",
+	messages=[
+		{
+			'role': 'user',
+			'content': 'What is text that you read:',
+			'images': ['test.jpg']
+		}
+	]
+)
+
+print(res['message']['content'])
+```
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/test.jpg)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/1.png)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/2.png)
+
 # Fine Tuning Large Language Model (LLM)
 
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/1_J058x7lmBME4fDT7V-rrZg.webp)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/dataset.PNG)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/flan2_architecture.jpg)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/flat-large.PNG)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/Screenshot%20from%202024-12-06%2011-10-58.png)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/Screenshot%20from%202024-12-06%2012-26-20.png)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/test-fine-tuning.PNG)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/after-tuning-flat-xl.PNG)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/sama-same-but-different.PNG)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/t5-small.png)
+
 # Bonus: conky (Ubuntu)
+
+```bash
+sudo nano /etc/conky/conky.conf
+```
 
 conky.conf  
 
@@ -169,4 +219,7 @@ while(True):
 * [Введение в библиотеку Transformers и платформу Hugging Face](https://habr.com/ru/articles/704592/)
 * [$ ollama run llama3.2 "Summarize this file: $(cat README.md)"](https://github.com/ollama/ollama#customize-your-own-model)
 * [How to set ollama temperature from command line](https://genai.stackexchange.com/questions/699/how-to-set-ollama-temperature-from-command-line)
-* https://askubuntu.com/questions/1249921/i-cant-see-my-internet-speed-on-conky
+* [I can't see my internet speed on conky](https://askubuntu.com/questions/1249921/i-cant-see-my-internet-speed-on-conky)
+* [rebootGPUcurrenttemperaturelimit](https://github.com/unton3ton/rebootGPUcurrenttemperaturelimit)
+
+![](https://raw.githubusercontent.com/tonypithony/myLLMs/refs/heads/main/animation.gif)
