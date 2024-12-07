@@ -1,0 +1,17 @@
+accelerate==1.1.1
+datasets==3.1.0
+evaluate==0.4.3
+notebook==7.3.1
+peft==0.13.2
+torch==2.5.1
+transformers==4.46.3
+
+--or--
+
+pip install notebook ipywidgets
+!pip install datasets
+!pip install transformers
+!pip install evaluate
+!pip install accelerate -U
+!pip install transformers[torch]
+!pip install peft
